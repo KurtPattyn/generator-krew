@@ -18,7 +18,11 @@
     "generators"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "krew",
+    "microservices",
+    "12factor",
+    "servicebus"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
