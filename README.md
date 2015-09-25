@@ -27,6 +27,7 @@ yo krew
 This command creates the following files and directories:
 ```
 .
+├── .editorconfig
 ├── .gitattributes
 ├── .gitignore
 ├── .jshintrc
@@ -42,6 +43,7 @@ This command creates the following files and directories:
 ├── test
      └── index.js
 ```
+`.editorconfig` is a base configuration of the editor. See [EditorConfig][editor-config-url].  
 `.gitattributes` and `.gitignore` are configuration files for git.  
 `.jshintrc` and `.jshintrc` are configuration files for [jshint][jshint-url] (invoked through `npm code-analysis`).  
 `.jscsrc` is a configuration file for [jscs][jscs-url] (invoked through `npm run check-style`).  
@@ -90,3 +92,4 @@ MIT
 [jscs-url]: http://jscs.info
 [travis-ci-url]: https://travis-ci.org/
 [jsdoc-url]: http://usejsdoc.org
+[editor-config-url]: http://editorconfig.org
