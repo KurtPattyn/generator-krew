@@ -1,4 +1,5 @@
-# generator-krew [![Build Status](https://secure.travis-ci.org/KurtPattyn/generator-krew.png?branch=master)](https://travis-ci.org/KurtPattyn/generator-krew)
+# generator-krew
+[![Build Status](https://secure.travis-ci.org/KurtPattyn/generator-krew.png?branch=master)](https://travis-ci.org/KurtPattyn/generator-krew)
 
 > [Yeoman](http://yeoman.io) generator
 
