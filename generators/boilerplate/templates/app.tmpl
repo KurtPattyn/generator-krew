@@ -1,0 +1,57 @@
+"use strict";
+
+var Worker = require("krew").Worker;
+var Transport = require("kimbu").Transport;
+var karl = require("karl");
+var <%= pkgSafeName %>Handler = require("./lib");
+
+karl.setOptions({
+  json: false,
+  colorize: true
+});
+
+var RabbitMQTransport = Transport.providers.RabbitMQTransport;
+var transport = new RabbitMQTransport();
+var <%= pkgSafeName %> = new Worker("<%= pkgSafeName %>", transport, <%= pkgSafeName %>Handler);
+
+function init(callback) {
+  //TODO: add your initialisation logic here
+  //e.g. create a database connection
+  //example:
+  //var url = 'mongodb://localhost:27017/myproject';
+  //MongoClient.connect(url, function(err, db) {
+  //  if (err) {
+  //    callback(err);
+  //  } else {
+  //    //attach mongodbConnection to testyo worker
+  //    testyo.mongodbConnection = db;
+  //    callback(null);
+  //  }
+  //});
+
+  callback(null);
+}
+
+
+function main() {
+  init(function(err) {
+    if (err) {
+      console.error("Error initialising <%= pkgSafeName %>", err);
+      process.exit(-1);
+    }
+    <%= pkgSafeName %>.start(function(err) {
+      if (err) {
+        console.error("Error starting <%= pkgSafeName %>", err);
+        process.exit(-1);
+      }
+
+      //from here on it is possible to call <%= pkgSafeName %>.request and <%= pkgSafeName %>.publish
+
+      process.on("SIGINT", function() {
+        setImmediate(process.exit.bind(null, 0));
+      });
+    });
+  });
+}
+
+main();

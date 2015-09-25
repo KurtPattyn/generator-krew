@@ -1,0 +1,7 @@
+sudo: false
+language: node_js
+node_js:
+  - 'iojs'
+  - 'latest'
+  - '0.12'
+  - '0.10'

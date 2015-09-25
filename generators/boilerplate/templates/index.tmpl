@@ -1,0 +1,32 @@
+"use strict";
+
+//TODO: replace with your own business logic handler
+function someDummyMethodHandler(parameters, next) {
+  //`this` refers to the worker instance
+
+  console.log("Received some.dummy.command with parameters:", parameters);
+  var result = "dummy";
+
+  //next takes a result or an Error object for commands
+  next(result);
+
+  //or next(new Error("you did it wrong dude!"));
+}
+
+//TODO: replace with your own business logic handler
+function someDummyEventHandler(parameters, next) {
+  //`this` refers to the worker instance
+
+  console.log("Received some.dummy.event with parameters:", parameters);
+
+  //next takes no arguments when it is an event
+  next();
+}
+
+//TODO: replace with your own messages and business logic
+var <%= pkgSafeName %>Handler = {
+  "some.dummy.method": someDummyMethodHandler,
+  "some.dummy.event": someDummyEventHandler
+};
+
+module.exports = <%= pkgSafeName %>Handler

@@ -1,0 +1,15 @@
+"use strict";
+
+var assert = require("assert");
+var <%= pkgSafeName %>Handler = require("../lib");
+
+//TODO: create a message transport, e.g. new RabbitMQTransport
+//TODO: create a worker, e.g. new Worker("<%= pkgSafeName %>", transport, <%= pkgSafeName %>Handler);
+//TODO: attach any necessary additional resources to the worker, e.g. a MongoDB connection
+//TODO: start() the worker
+
+describe("<%= pkgName %>", function () {
+  it("should have unit test!", function () {
+    assert(false, "we expected this package author to add actual unit tests.");
+  });
+});
