@@ -26,5 +26,10 @@ module.exports = generators.Base.extend({
       this.templatePath('jsdoc.conf'),
       this.destinationPath('jsdoc.conf')
     );
+
+    this.fs.copy(
+      this.templatePath('editorconfig'),
+      this.destinationPath('.editorconfig')
+    );
   }
 });
