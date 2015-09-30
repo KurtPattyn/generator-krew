@@ -4,6 +4,7 @@
   "description": "Yeoman generator to scaffold a new member of the krew family.",
   "license": "MIT",
   "main": "index.js",
+  "preferGlobal": true,
   "repository": "KurtPattyn/generator-krew",
   "author": {
     "name": "Kurt Pattyn",
