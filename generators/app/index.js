@@ -183,6 +183,7 @@ module.exports = generators.Base.extend({
         'test': 'node_modules/mocha/bin/mocha --bail --reporter spec --check-leaks test/',
         'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec --check-leaks test/',
         'test-ci': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/',
+        'check-coverage': 'istanbul check-coverage --lines 100 --statements 100 --branches 100 --functions 100',
         'benchmark': 'node benchmarks/benchmark',
         'make-docs': './node_modules/.bin/jsdoc . -c jsdoc.conf',
         'check-style': './node_modules/jscs/bin/jscs .',
@@ -243,26 +244,6 @@ module.exports = generators.Base.extend({
       local: require.resolve('../boilerplate')
     });
   },
-
-  //writing: {
-  //  app: function () {
-  //    this.fs.copy(
-  //      this.templatePath('_package.json'),
-  //      this.destinationPath('package.json')
-  //    );
-  //  },
-  //
-  //  projectfiles: function () {
-  //    this.fs.copy(
-  //      this.templatePath('editorconfig'),
-  //      this.destinationPath('.editorconfig')
-  //    );
-  //    this.fs.copy(
-  //      this.templatePath('jshintrc'),
-  //      this.destinationPath('.jshintrc')
-  //    );
-  //  }
-  //},
 
   install: function () {
     this.installDependencies();
