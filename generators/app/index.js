@@ -250,6 +250,6 @@ module.exports = generators.Base.extend({
   },
 
   end: function() {
-    this.log("You can now start your worker by typing `npm start`. Yeehaa.");
+    this.log('You can now start your worker by typing `npm start`. Yeehaa.');
   }
 });
