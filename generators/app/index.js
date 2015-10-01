@@ -63,16 +63,6 @@ module.exports = generators.Base.extend({
       filter: _.kebabCase,
       validate: function(str) {
         return str.length > 0;
-        //npmName(str, function (err, available) {
-        //  if (err) {
-        //    this.log('Error looking up availability of package:', err);
-        //    validationDone(true);
-        //  } else if (!available) {
-        //    validationDone('Package ' + str + ' is already taken on npm. Please choose another name.');
-        //  } else {
-        //    validationDone(true);
-        //  }
-        //});
       }
     }, {
       name: 'description',
