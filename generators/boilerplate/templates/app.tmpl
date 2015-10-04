@@ -10,21 +10,22 @@ karl.setOptions({
   colorize: true
 });
 
-var RabbitMQTransport = Transport.providers.RabbitMQTransport;
-var transport = new RabbitMQTransport();
-var <%= pkgSafeName %> = new Worker("<%= pkgSafeName %>", transport, <%= pkgSafeName %>Handler);
+const RabbitMQTransport = Transport.providers.RabbitMQTransport;
+const transport = new RabbitMQTransport();
+const <%= pkgSafeName %> = new Worker("<%= pkgSafeName %>", transport, <%= pkgSafeName %>Handler);
 
 function init(callback) {
   //TODO: add your initialisation logic here
   //e.g. create a database connection
   //example:
-  //var url = 'mongodb://localhost:27017/myproject';
+  //const url = "mongodb://localhost:27017/mydatabase";
+  //const MongoClient = require("mongodb").MongoClient;
   //MongoClient.connect(url, function(err, db) {
   //  if (err) {
   //    callback(err);
   //  } else {
-  //    //attach mongodbConnection to testyo worker
-  //    testyo.mongodbConnection = db;
+  //    //attach mongodbConnection to <%= pkgSafeName %> worker
+  //    <%= pkgSafeName %>.mongodbConnection = db;
   //    callback(null);
   //  }
   //});
