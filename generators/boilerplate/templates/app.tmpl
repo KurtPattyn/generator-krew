@@ -20,7 +20,14 @@ function init(callback) {
   //example:
   //const url = "mongodb://localhost:27017/mydatabase";
   //const MongoClient = require("mongodb").MongoClient;
-  //MongoClient.connect(url, function(err, db) {
+  //const mongoOptions = {
+  //  server: {
+  //    socketOptions: {
+  //      connectTimeoutMS: 500
+  //    }
+  //  }
+  //};
+  //MongoClient.connect(url, mongoOptions, function(err, db) {
   //  if (err) {
   //    callback(err);
   //  } else {
