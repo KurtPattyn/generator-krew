@@ -3,6 +3,7 @@
 //TODO: replace with your own business logic handler
 function someDummyMethodHandler(parameters, next) {
   //`this` refers to the worker instance
+  /*jshint validthis: true */
 
   console.log("Received some.dummy.command with parameters:", parameters);
   var result = "dummy";
@@ -16,6 +17,7 @@ function someDummyMethodHandler(parameters, next) {
 //TODO: replace with your own business logic handler
 function someDummyEventHandler(parameters, next) {
   //`this` refers to the worker instance
+  /*jshint validthis: true */
 
   console.log("Received some.dummy.event with parameters:", parameters);
 
