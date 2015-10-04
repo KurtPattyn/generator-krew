@@ -6,7 +6,7 @@ function someDummyMethodHandler(parameters, next) {
   /*jshint validthis: true */
 
   console.log("Received some.dummy.command with parameters:", parameters);
-  var result = "dummy";
+  let result = "dummy";
 
   //next takes a result or an Error object for commands
   next(result);
@@ -26,7 +26,7 @@ function someDummyEventHandler(parameters, next) {
 }
 
 //TODO: replace with your own messages and business logic
-var <%= pkgSafeName %>Handler = {
+const <%= pkgSafeName %>Handler = {
   "some.dummy.method": someDummyMethodHandler,
   "some.dummy.event": someDummyEventHandler
 };
