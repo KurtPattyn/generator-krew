@@ -170,11 +170,11 @@ module.exports = generators.Base.extend({
       },
       scripts: {
         'start': 'node app.js',
-        'test': 'node_modules/mocha/bin/mocha --bail --reporter spec --check-leaks test/',
-        'test-cov': 'istanbul cover node_modules/mocha/bin/_mocha -- --reporter spec --check-leaks test/',
-        'test-ci': 'istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/',
+        'test': 'node_modules/mocha/bin/mocha --harmony --bail --reporter spec --check-leaks test/',
+        'test-cov': 'node --harmony node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --reporter spec --check-leaks test/',
+        'test-ci': 'node --harmony node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha --report lcovonly -- --harmony --reporter spec --check-leaks test/',
         'check-coverage': 'istanbul check-coverage --lines 100 --statements 100 --branches 100 --functions 100',
-        'benchmark': 'node benchmarks/benchmark',
+        'benchmark': 'node --harmony benchmarks/benchmark',
         'make-docs': './node_modules/.bin/jsdoc . -c jsdoc.conf',
         'check-style': './node_modules/jscs/bin/jscs .',
         'code-analysis': './node_modules/jshint/bin/jshint .'
