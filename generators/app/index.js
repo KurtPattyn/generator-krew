@@ -222,6 +222,10 @@ module.exports = generators.Base.extend({
       });
     }
 
+    this.composeWith('krew:forever', {}, {
+      local: require.resolve('../forever')
+    });
+
     this.composeWith('krew:qa', {}, {
       local: require.resolve('../qa')
     });
